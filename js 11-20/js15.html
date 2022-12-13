@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js15번</title>
+    <style>
+        .input,.answer{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: 50vh;
+            height: 100px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>문제 15</h1>
+    <p></p>
+    신학기가 시작되고, 아이들이 돌아가면서 자기소개를 하기로 했습니다.
+    </p>
+    <p></p>
+    만약 입력으로 김다정이라는 이름이 주어지면</p>
+    <h3> "안녕하세요. 저는 김다정입니다."</h3>
+    <p>라고 출력하게 해주세요.
+    </p>
+    
+    <div class="inner">
+        <div class="input">
+            입력값
+        </div>
+        <div class="answer">
+            결과 <br>
+        </div>
+    </div>
+
+    <script>
+        const inputname = prompt('이름을 입력하세요!','김다정');
+        const docInput = document.querySelector('.input');
+        const answer = document.querySelector('.answer');
+        docInput.innerHTML += inputname
+
+        console.log(`안녕하세요. 저는 ${inputname} 입니다.`)
+        answer.innerHTML += `안녕하세요. 저는 ${inputname} 입니다.`
+    </script>
+<!-- 
+# 답안
+
+```jsx
+const name = prompt('이름을 입력하세요.');
+
+console.log(`안녕하세요. 저는 ${name}입니다.`); 
+/*
+* es6부터는 backtick 문자열(``) 안에서 $와 중괄호로 표현식을 사용할 수 있습니다. 
+* 이를 템플릿 리터럴(Template literals)이라 합니다.
+*/
+``` -->
+</body>
+
+</html>

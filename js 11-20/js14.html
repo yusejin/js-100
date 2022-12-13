@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js14번</title>
+    <style>
+        .input,.answer{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: 50vh;
+            height: 100px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> # 문제14 : 3의 배수 인가요?</h1>
+    <p>
+        영희는 친구와 게임을 하고 있습니다. 서로 돌아가며 랜덤으로 숫자를 하나 말하고 그게 3의 배수이면 박수를 치고 아니면 그 숫자를 그대로 말하는 게임입니다.
+    </p>
+    <p>
+        입력으로 랜덤한 숫자 n이 주어집니다.
+    </p>
+    <p>
+        만약 그 수가 **3의 배수라면 '짝'이라는 글자를, 3의 배수가 아니라면 n을 그대로 출력해 주세요.
+    </p>
+    <div class="inner">
+        <div class="input">
+            입력값
+        </div>
+        <div class="answer">
+            결과 <br>
+        </div>
+    </div>
+    <script>
+        const input = prompt();
+        const docInput = document.querySelector('.input');
+        const answer = document.querySelector('.answer');
+        docInput.innerHTML += input
+
+        if (input % 3 == 0) {
+            console.log('짝');
+            answer.innerHTML += '짝';
+        } else {
+            console.log(input)
+            answer.innerHTML += input;
+        }
+
+    </script>
+
+
+    <!-- 
+# 답안
+
+```jsx
+const n = prompt('숫자를 입력하세요.');
+
+if (n%3 == 0) { // 나머지 연산 %는 n을 3으로 나누었을때 몫이 아닌 나머지 값을 반환합니다.
+    console.log('짝');
+} else {
+    console.log(n);
+}
+``` -->
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js18번</title>
+    <style>
+        .input,
+        .answer {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: 50vh;
+            height: 100px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        # 문제18 : 평균 점수
+    </h1>
+    <p>
+        영하네 반은 국어, 수학, 영어 시험을 보았습니다. 영하는 친구들의 평균 점수를 구해주기로 했습니다.
+    </p>
+    <p>
+        공백으로 구분하여 세 과목의 점수가 주어지면 **전체 평균 점수**를 구하는 프로그램을 작성하세요.
+        **단, 소숫점 자리는 모두 버립니다.**
+    </p>
+    <div class="inner">
+        <div class="input">
+            입력값
+        </div>
+        <div class="answer">
+            결과
+        </div>
+    </div>
+
+    <script>
+        const name = prompt("이름을 알려주세요");
+        const kor = Number(prompt("국어점수는 몇점입니까?"));
+        const mat = Number(prompt("수학점수는 몇점입니까?"));
+        const eng = Number(prompt("영어점수는 몇점입니까?"));
+        const tot = Math.floor((kor + mat + eng) / 3)
+
+        const docInput = document.querySelector('.input');
+        const answer = document.querySelector('.answer');
+        docInput.innerHTML += name + '<br>' + kor + '<br>' + mat + '<br>' + eng + '<br>'
+        console.log(`평균점수! :${tot}`)
+        answer.innerHTML += `평균점수! :${tot}`
+
+    </script>
+<!-- # 답안
+
+```jsx
+const scores = prompt('세 과목의 점수를 입력하세요.').split(' ');
+let sum = 0;
+
+for (let i=0; i<3; i++){
+  sum += parseInt(scores[i], 10); // 십진수의 형태의 숫자로 데이터 타입을 변환합니다.
+}
+
+console.log(Math.floor(sum/3)); //Math.floor 메서드는 소수점 자리를 모두 버림합니다.
+``` -->
+</body>
+
+</html>
