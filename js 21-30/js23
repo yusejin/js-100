@@ -4,7 +4,8 @@
 // import area from "./js25"
 
 console.log(10/3)
-
+var str = 'html,css,javascript,jquery,apache,php';
+console.log(str.split(','));
 // console.log(area(3))
 
 
