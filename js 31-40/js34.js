@@ -5,3 +5,21 @@
 // 민주를 위해 **키가 주어지면 순서대로 제대로 섰는지 확인하는 프로그램**을 작성해보자.
 // (키는 공백으로 구분하여 입력됩니다.)
 
+
+
+const unsorted = prompt('키를 입력하세요');
+let sorted = "";
+
+sorted = unsorted.split(" ").sort(
+  function (a, b) {
+    console.log(a,b)
+    return a - b;
+  
+  })
+  .join(" ");
+  console.log(unsorted)
+if (unsorted === sorted) {
+  console.log("Yes");
+} else {
+  console.log("No");
+}
