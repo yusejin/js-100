@@ -7,17 +7,11 @@
 
 
 
-const unsorted = prompt('키를 입력하세요');
+const unsorted = '12 45 78'
 let sorted = "";
 
-sorted = unsorted.split(" ").sort(
-  function (a, b) {
-    console.log(a,b)
-    return a - b;
-  
-  })
-  .join(" ");
-  console.log(unsorted)
+sorted = unsorted.split(" ").sort().join(" ");
+  // console.log(typeof(sorted),sorted)
 if (unsorted === sorted) {
   console.log("Yes");
 } else {
